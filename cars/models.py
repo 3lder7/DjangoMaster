@@ -14,6 +14,8 @@ class Car(models.Model):#tabela Car no banco que herda a classe Model já imbuti
     factory_year = models.IntegerField(blank=True, null=True)#IntegerField vem de Model (Campo de valor inteiro)
     model_year =  models.IntegerField(blank=True, null=True)
     value = models.FloatField(blank=True, null=True)#FloatField vem de Model (Campo de valor flutuante)
+    plate = models.CharField(max_length=10, blank=True, null=True)#Placa do carro
+    photo = models.ImageField(upload_to='cars/', blank=True, null=True)#Foto do carro
 
     def __str__(self):
         return self.model 
